@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  unbound-exporter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: unbound-exporter
+    command:
+      - unbound.host="tcp://unbound:8953"
+    restart: always
